@@ -48,6 +48,8 @@ func main() {
 		fmt.Println(err.Error())
 		return
 	}
+	
+	fmt.Println("Successfully Write users.json")
 
 	// ! Authors.json
 	jsonFile, err = os.Open("authors.json")
@@ -68,6 +70,8 @@ func main() {
 		fmt.Println(err.Error())
 		return
 	}
+	
+	fmt.Println("Successfully Write authors.json")
 
 	// ! Authors.json
 	jsonFile, err = os.Open("authorslist.json")
@@ -88,6 +92,8 @@ func main() {
 		fmt.Println(err.Error())
 		return
 	}
+	
+	fmt.Println("Successfully Write authorslist.json")
 
 	db, err := sqlx.Open("postgres", "host='localhost' port='5432' user='postgres' dbname='postgres' password='qwerty123' sslmode='disable'")
 	if err != nil {
